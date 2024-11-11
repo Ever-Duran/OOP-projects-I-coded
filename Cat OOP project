@@ -1,1 +1,24 @@
-
+class Gato:
+    print("¡Hola! Este es tu nuevo amigo.")
+    def __init__(self, nombre = ""):
+        self.nombre = nombre
+        
+    def nombrar(self):
+        self.nombre = str(input("¿Cómo querés que se llame tu gato? Escribí su nombre: "))
+            
+    def comida(self, comida = ""):
+        self.comida = str(input("El gato tiene hambre. ¿Qué vas a darle de comer? "))
+            
+    def acariciar(self, acariciar = ""):
+        self.acariciar = str(input("¿Querés acariciar al gato? ¿Si o No? "))
+        print(f"Nombre: {self.nombre}")
+        print("¡Qué bonito nombre! ¡Me gusta!")
+        print(f"Comida: {self.comida}")
+        print("Gracias. ¡Ahora estoy lleno!")
+        print(f"Acariciar: {self.acariciar}")
+        print("Te quiero mucho")
+        
+gato = Gato()
+gato.nombrar()
+gato.comida()
+gato.acariciar()
