@@ -1,1 +1,25 @@
-
+class Inscripcion:
+    print("Registro de estudiantes")
+    
+    def init(self, nombre = "", edad = 0, distrito = "", grado = ""):
+        self.nombre = nombre
+        self.edad = edad
+        self.distrito = distrito
+        self.grado = grado
+    
+    def agregar_nombre_edad(self):
+        self.nombre = str(input("Ingrese nombre de estudiante: "))
+        self.edad = int(input("Ingrese la edad de estudiante: "))
+        
+        
+    def localidad(self):   
+        self.distrito = str(input("Ingrese el distro del estudiante: "))
+        self.grado = int(input("Ingrese el grado que cursa el estudiante: "))
+        print(f"Nombre: {self.nombre}")
+        print(f"Edad: {self.edad}")
+        print(f"Distrito: {self.distrito}")
+        print(f"Grado: {self.grado}")
+    
+inscripcion = Inscripcion()
+inscripcion.agregar_nombre_edad()
+inscripcion.localidad()
