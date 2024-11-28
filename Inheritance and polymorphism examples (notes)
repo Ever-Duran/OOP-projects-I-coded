@@ -1,1 +1,25 @@
+#I don't own this code. It's an example I got at ESIT
+
+#!/usr/bin/env python
+#Ejemplo de metodo protegido y atributo en Python
+class MyClass:
+    def init(self):
+            self._protected_attribute = "Esto es un atributo protegido"
+    def _protected_method(self):
+        print("Esto es un método protegido")
+
+
+#!/usr/bin/env python
+#Ejemplo de aplicación de métodos finales en Python
+from typing import final
+
+class BaseClass:
+    @final
+    def final_method(self):
+        print("Este metodo no se puede anular.")
+
+clases SubClass(BaseClass):
+    def final_method(self): #Esto generará una advertencia en algunos IDE, pero Python no lo aplica
+
+        print("Tratando de anular")
 
