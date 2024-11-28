@@ -8,6 +8,7 @@ class MyClass:
     def _protected_method(self):
         print("Esto es un método protegido")
 
+#**********
 
 #!/usr/bin/env python
 #Ejemplo de aplicación de métodos finales en Python
@@ -21,5 +22,40 @@ class BaseClass:
 clases SubClass(BaseClass):
     def final_method(self): #Esto generará una advertencia en algunos IDE, pero Python no lo aplica
 
-        print("Tratando de anular")
+    print("Tratando de anular")
+
+
+#***********
+
+#!/usr/bin/env python
+###Ejemplo completo
+from typing import final
+
+class BaseClass:
+    def init(self):
+        self._protected_attribute = "Esto es un atributo protegido"
+    def _protected_method(self):
+        print("Esto es un método protegido")
+
+
+    @final
+    def final_method(self):
+        print("Este método no se puede anular")
+
+class SubClass(BaseClass):
+    def some_method(self):
+        print(self._protected_attribute) #Accesando al atributo protegido
+self._protected_method() #llamando al método protegido
+
+#Si desconectas el siguiente método generaría una advertencia en algunos IDE
+#def final_method(self):
+#print("Intentando anular")
+
+#usage
+obj = SubClass()
+obj.some_method()
+
+
+
+
 
