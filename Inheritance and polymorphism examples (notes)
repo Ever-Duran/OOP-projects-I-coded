@@ -56,6 +56,31 @@ obj = SubClass()
 obj.some_method()
 
 
+****************
+#Multiple inheritance and interfaces
+
+class A:
+    def method_a(self):
+        print("Imprimiendo el, método de A")
+
+class B:
+    def method_b(self):
+        print("Imprimiendo el, método de B")
+
+class C(A, B):
+    def method_c(self):
+        print("Imprimiendo en método de C")
+
+
+#Crear instancia de la clase C
+obj = C()
+
+#Llamar a los métodos de las clases A, B y C
+
+obj.method_a() #Salida: Method A
+obj.method_b() #Salida: Method B
+obj.method_c() #Salida: Method C
+
 
 
 
