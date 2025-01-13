@@ -1,0 +1,35 @@
+#clase de caja de cambios de un auto
+class Velocidades():
+    print("Ingrese la velocidad del auto")
+    
+    def __init__(self, modo = 0, prender = False, direccion = ""):
+        self.modo = modo
+        self.direccion = direccion
+        self.prendido = prender
+        
+    def prender(self):
+        self.prendido = not self.prendido
+        
+        if self.prendido:
+            print("El auto está encendido.")
+        else:
+            print("El auto está apagado.")
+        
+    def velocidad(self):
+        if not self.prendido:
+            print("No puedes cambiar la velocidad porque el auto está apagado.")
+            return
+        
+        self.modo = int(input("Selecciona la velocidad del auto "))
+        self.direccion = str(input("Ingrese qué dirección debe tomar el auto "))
+        print(f"prender: {self.prendido}")
+        print(f"Modo: Pusiste la velocidad {self.modo}")
+        print(f"Direccion: Giras a la {self.direccion}")
+         
+            
+velocidades = Velocidades()
+velocidades.prender()
+velocidades.velocidad()
+velocidades.prender()
+velocidades.velocidad()
+        
